@@ -1,0 +1,13 @@
+version: "3"
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: url-shortener:latest
+    container_name: url-shortener-server
+    command: make gin/server
+    volumes:
+      - .:/go/src/github.com/azeezolaniran2016/url-shortener
+    ports:
+      - "8000:3000"
