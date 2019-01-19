@@ -7,7 +7,7 @@ dev/server:
 
 .PHONY: dev/clean-server
 dev/clean-server:
-	@echo "Removing server container, images and volumees"
+	@echo "Removing server container, images and volumes"
 	@docker-compose -f docker-compose.loc.yml down --rmi all
 
 .PHONY: gin/server
